@@ -1,5 +1,5 @@
 import axios from "axios";
-import { EXPO_API_KEY } from "@env";
+import { apiKey } from "../constants";
 
 const baseUrl = "https://exercisedb.p.rapidapi.com";
 
@@ -10,7 +10,7 @@ const apiCall = async (url, params) => {
       url,
       params,
       headers: {
-        "X-RapidAPI-Key": EXPO_API_KEY,
+        "X-RapidAPI-Key": apiKey,
         "X-RapidAPI-Host": "exercisedb.p.rapidapi.com",
       },
     };

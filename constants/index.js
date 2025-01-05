@@ -52,6 +52,7 @@ export const bodyParts = [
     image: require("../assets/images/waist.png"),
   },
 ];
+export const apiKey = process.env.EXPO_PUBLIC_API_KEY;
 
 export const demoExercises = [
   {
