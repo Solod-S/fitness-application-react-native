@@ -12,7 +12,7 @@ export default function _layout() {
       }}
     >
       <Stack.Screen
-        name="index"
+        name="exercises"
         options={{
           presentation: "fullScreenModal",
         }}

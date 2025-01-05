@@ -1,13 +1,16 @@
+import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
+import { useRouter } from "expo-router";
 import { StatusBar } from "expo-status-bar";
 import { Image, Text, TouchableOpacity, View } from "react-native";
-import Animated, { FadeIn, FadeInDown, FadeOut } from "react-native-reanimated";
+import Animated, { FadeIn, FadeInDown } from "react-native-reanimated";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 
 export default function HomeScreen() {
+  const router = useRouter();
   return (
     <View className="flex-1  flex justify-end ">
       <StatusBar style="dark" />
@@ -46,8 +49,9 @@ export default function HomeScreen() {
           </Text>
         </Animated.View>
 
-        <Animated.View entering={FadeInDown.delay(200).springify()}>
+        <Animated.View entering={FadeIn.delay(200).springify()}>
           <TouchableOpacity
+            onPress={() => router.push("home")}
             style={{ height: hp(7), width: wp(80) }}
             className="bg-rose-500 flex items-center justify-center mx-auto rounded-full border-[2px] border-neutral-200"
           >
