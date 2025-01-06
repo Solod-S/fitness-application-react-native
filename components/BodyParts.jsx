@@ -1,4 +1,5 @@
-import { View, Text, FlatList, TouchableOpacity, Image } from "react-native";
+import { View, Text, FlatList, TouchableOpacity } from "react-native";
+import { Image } from "expo-image";
 import React from "react";
 import {
   widthPercentageToDP as wp,
@@ -51,8 +52,13 @@ const BodyPartCard = ({ item, router, index }) => {
       >
         <Image
           source={item.image}
-          resizeMode="cover"
-          style={{ width: wp(44), height: wp(52) }}
+          contentFit="cover"
+          style={{
+            width: wp(44),
+            height: wp(52),
+            position: "absolute",
+            borderRadius: 35,
+          }}
           className="rounded-[35px] absolute"
         />
 
@@ -65,12 +71,10 @@ const BodyPartCard = ({ item, router, index }) => {
             bottom: 0,
             borderBottomLeftRadius: 35,
             borderBottomRightRadius: 35,
-            borderRadius: 35,
           }}
           start={{ x: 0.5, y: 0 }}
           end={{ x: 0.5, y: 1 }}
         />
-
         <Text
           style={{ fontSize: hp(2.3) }}
           className="text-white font-semibold text-center tracking-wide"
