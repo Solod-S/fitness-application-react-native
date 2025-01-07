@@ -18,7 +18,7 @@ export default function exerciseDetails() {
       <View className="flex flex-1">
         <View className="shadow-md bg-white rounded-b-[40px]">
           <Image
-            source={{ uri: item.gifUrl }}
+            source={item.gifUrl}
             contentFit="cover"
             style={{ width: wp(100), height: wp(100) }}
             className="rounded-b-[40px]"
@@ -51,7 +51,7 @@ export default function exerciseDetails() {
             style={{ fontSize: hp(2) }}
             className=" text-neutral-700 tracking-wide"
           >
-            Equipment{" "}
+            Equipment:{" "}
             <Text className="font-bold text-neutral-800">
               {item?.equipment}
             </Text>
@@ -61,7 +61,7 @@ export default function exerciseDetails() {
             style={{ fontSize: hp(2) }}
             className=" text-neutral-700 tracking-wide"
           >
-            Secondary Muscles{" "}
+            Secondary Muscles:{" "}
             <Text className="font-bold text-neutral-800">
               {item?.secondaryMuscles}
             </Text>

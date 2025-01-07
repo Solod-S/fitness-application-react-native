@@ -34,7 +34,8 @@ const ExerciseCard = ({ item, router, index }) => {
     <Animated.View
       entering={FadeInDown.duration(400)
         .delay(index * 200)
-        .springify()}
+        .springify()
+        .damping(6)}
     >
       <TouchableOpacity
         onPress={() =>
@@ -42,9 +43,9 @@ const ExerciseCard = ({ item, router, index }) => {
         }
         className="flex py-3 space-y-2"
       >
-        <View className="bg-white shadow rounded-[25px] mb-2">
+        <View className=" bg-white shadow rounded-[25px] mb-2">
           <Image
-            source={{ uri: item.gifUrl }}
+            source={item.gifUrl}
             contentFit="cover"
             style={{ width: wp(44), height: wp(52), borderRadius: 25 }}
           />
@@ -54,7 +55,7 @@ const ExerciseCard = ({ item, router, index }) => {
           style={{ fontSize: hp(1.7) }}
           className="text-neutral-700 font-semibold ml-1  tracking-wide"
         >
-          {item?.name?.length > 20 ? item.name.slice(0, 20) + "..." : item.name}
+          {item?.name?.length > 16 ? item.name.slice(0, 16) + "..." : item.name}
         </Text>
       </TouchableOpacity>
     </Animated.View>

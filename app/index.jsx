@@ -13,7 +13,7 @@ export default function HomeScreen() {
   const router = useRouter();
   return (
     <View className="flex-1  flex justify-end ">
-      <StatusBar style="dark" />
+      <StatusBar style="light" />
       <Image
         className="w-full h-full absolute"
         source={require("../assets/images/welcome.png")}

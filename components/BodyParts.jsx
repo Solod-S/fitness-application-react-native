@@ -43,7 +43,8 @@ const BodyPartCard = ({ item, router, index }) => {
     <Animated.View
       entering={FadeInDown.duration(400)
         .delay(index * 200)
-        .springify()}
+        .springify()
+        .damping(6)}
     >
       <TouchableOpacity
         onPress={() => router.push({ pathname: "/exercises", params: item })}
