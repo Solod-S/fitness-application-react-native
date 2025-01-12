@@ -7,6 +7,7 @@ import {
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import Animated, { FadeInDown } from "react-native-reanimated";
+import { capitalizeFirstLetter } from "../shared/utils";
 
 export default function ExerciseList({ data }) {
   const router = useRouter();
@@ -55,7 +56,9 @@ const ExerciseCard = ({ item, router, index }) => {
           style={{ fontSize: hp(1.7) }}
           className="text-neutral-700 font-semibold ml-1  tracking-wide"
         >
-          {item?.name?.length > 16 ? item.name.slice(0, 16) + "..." : item.name}
+          {item?.name?.length > 16
+            ? capitalizeFirstLetter(item.name.slice(0, 16)) + "..."
+            : capitalizeFirstLetter(item.name)}
         </Text>
       </TouchableOpacity>
     </Animated.View>

@@ -12,20 +12,25 @@ import {
 import Ionicons from "react-native-vector-icons/Ionicons";
 import ExerciseList from "../components/ExerciseList";
 import { ScrollView } from "react-native-virtualized-view";
+import { capitalizeFirstLetter } from "../shared/utils";
 
 export default function Exercises() {
   const router = useRouter();
-  const [exercises, setExercises] = useState(demoExercises);
+  const [exercises, setExercises] = useState([]);
   const item = useLocalSearchParams();
-  // console.log('got item: ', item);
+  // console.log("got item: ", item);
 
   useEffect(() => {
-    // if (item) getExercises(item.name);
+    if (item) getExercises(item.name);
+    return () => {
+      setExercises([]);
+    };
   }, []);
 
-  const getExercises = async bodypart => {
-    let data = await fetchExercisesByBodypart(bodypart);
-    // console.log('got data: ', data);
+  const getExercises = async bodyPart => {
+    // let data = await fetchExercisesByBodypart(bodyPart);
+    let data = demoExercises.filter(item => item.bodyPart === bodyPart);
+    // console.log("got data: ", data);
     setExercises(data);
   };
   return (
@@ -50,7 +55,7 @@ export default function Exercises() {
           style={{ fontSize: hp(3) }}
           className="font-semibold text-neutral-700"
         >
-          {item.name} exercises
+          {capitalizeFirstLetter(item.name)} exercises
         </Text>
         <View className="mb-10">
           <ExerciseList data={exercises} />

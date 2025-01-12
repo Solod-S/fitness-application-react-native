@@ -9,6 +9,7 @@ import { bodyParts } from "../constants";
 import { LinearGradient } from "expo-linear-gradient";
 import { useRouter } from "expo-router";
 import Animated, { FadeInDown } from "react-native-reanimated";
+import { capitalizeFirstLetter } from "../shared/utils";
 
 export default function BodyParts() {
   const router = useRouter();
@@ -80,7 +81,7 @@ const BodyPartCard = ({ item, router, index }) => {
           style={{ fontSize: hp(2.3) }}
           className="text-white font-semibold text-center tracking-wide"
         >
-          {item?.name}
+          {item?.name && capitalizeFirstLetter(item?.name)}
         </Text>
       </TouchableOpacity>
     </Animated.View>

@@ -1,18 +1,20 @@
-import { View, Text, TouchableOpacity, ScrollView } from "react-native";
+import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import React from "react";
 import { useLocalSearchParams, useRouter } from "expo-router";
-import { Image } from "expo-image";
+// import { Image } from "expo-image";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
 import Anticons from "react-native-vector-icons/AntDesign";
 import Animated, { FadeInDown } from "react-native-reanimated";
+import { capitalizeFirstLetter } from "../shared/utils";
 
 export default function exerciseDetails() {
   const item = useLocalSearchParams();
   const router = useRouter();
+
   return (
     <SafeAreaView className="flex-1 flex space-y-5 " edges={["top"]}>
       <View className="flex flex-1">
@@ -44,7 +46,7 @@ export default function exerciseDetails() {
             style={{ fontSize: hp(3.5) }}
             className="font-semibold text-neutral-800 tracking-wide"
           >
-            {item.name}
+            {capitalizeFirstLetter(item.name)}
           </Animated.Text>
           <Animated.Text
             entering={FadeInDown.delay(100).duration(300).springify()}
@@ -93,7 +95,7 @@ export default function exerciseDetails() {
                 style={{ fontSize: hp(1.7) }}
                 className="text-neutral-800"
               >
-                {instruction}
+                * {instruction}
               </Animated.Text>
             );
           })}
