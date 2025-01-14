@@ -6,21 +6,21 @@ import { heightPercentageToDP as hp } from "react-native-responsive-screen";
 export default function TopBar() {
   return (
     <View className="flex-row justify-between items-center mx-5">
-      <View className="space-y-2">
+      <View className="space-y-2 w-full">
         <Text
           style={{ fontSize: hp(4.5) }}
-          className="font-bold tracking-wider text-neutral-700"
+          className="font-black tracking-wider text-neutral-700"
         >
           READY TO
         </Text>
         <Text
           style={{ fontSize: hp(4.5) }}
-          className="font-bold tracking-wider text-rose-700"
+          className="font-black tracking-wider  text-rose-700 text-right"
         >
           WORKOUT
         </Text>
       </View>
-      <View className="flex justify-center items-center space-y-2">
+      {/* <View className="flex justify-center items-center space-y-2">
         <Image
           style={{ height: hp(6), width: hp(6) }}
           source={require("../assets/images/avatar.png")}
@@ -32,7 +32,7 @@ export default function TopBar() {
         >
           <Ionicons name="notifications" size={hp(3)} color="gray" />
         </View>
-      </View>
+      </View> */}
     </View>
   );
 }

@@ -253,7 +253,7 @@ export const demoExercises = [
   {
     bodyPart: "back",
     equipment: "barbell",
-    gifUrl: require("../assets/images/ex/back/0073_back.webp"),
+    gifUrl: require("../assets/images/ex/back/0073_back.png"),
     id: "0073",
     instructions: [
       "Lie flat on a bench with your head at one end and your feet on the floor.",
@@ -907,7 +907,7 @@ export const demoExercises = [
   {
     bodyPart: "chest",
     equipment: "barbell",
-    gifUrl: require("../assets/images/ex/chest/0050.webp"),
+    gifUrl: require("../assets/images/ex/chest/0050.png"),
     id: "0050",
     instructions: [
       "Set up an incline bench at a 45-degree angle.",
@@ -1061,7 +1061,7 @@ export const demoExercises = [
   {
     bodyPart: "shoulders",
     equipment: "barbell",
-    gifUrl: require("../assets/images/ex/shoulders/0091.webp"),
+    gifUrl: require("../assets/images/ex/shoulders/0091.png"),
     id: "0091",
     instructions: [
       "Sit on a bench with your back straight and feet flat on the ground.",
@@ -1175,7 +1175,7 @@ export const demoExercises = [
   {
     bodyPart: "upper arms",
     equipment: "barbell",
-    gifUrl: require("../assets/images/ex/upper_arms/0030.webp"),
+    gifUrl: require("../assets/images/ex/upper_arms/0030.png"),
     id: "0030",
     instructions: [
       "Lie flat on a bench with your feet flat on the ground and your back pressed against the bench.",
@@ -1224,7 +1224,7 @@ export const demoExercises = [
   {
     bodyPart: "upper arms",
     equipment: "barbell",
-    gifUrl: require("../assets/images/ex/upper_arms/0038.webp"),
+    gifUrl: require("../assets/images/ex/upper_arms/0038.png"),
     id: "0038",
     instructions: [
       "Stand with your feet shoulder-width apart and hold a barbell with an underhand grip, palms facing up.",
@@ -1240,7 +1240,7 @@ export const demoExercises = [
   {
     bodyPart: "upper arms",
     equipment: "barbell",
-    gifUrl: require("../assets/images/ex/upper_arms/0048.webp"),
+    gifUrl: require("../assets/images/ex/upper_arms/0048.png"),
     id: "0048",
     instructions: [
       "Set up an incline bench at a 45-degree angle.",
@@ -1391,7 +1391,7 @@ export const demoExercises = [
   {
     bodyPart: "upper legs",
     equipment: "barbell",
-    gifUrl: require("../assets/images/ex/upper_legs/0032.webp"),
+    gifUrl: require("../assets/images/ex/upper_legs/0032.png"),
     id: "0032",
     instructions: [
       "Stand with your feet shoulder-width apart and the barbell on the ground in front of you.",

@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "fitness-application",
-    "slug": "fitness-application",
+    "name": "Fit Body Flow",
+    "slug": "fit-body-flow",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -17,7 +17,8 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/images/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "con.solik098.fitnesapp"
     },
     "web": {
       "bundler": "metro",
@@ -38,6 +39,14 @@
     ],
     "experiments": {
       "typedRoutes": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "0085451d-8d37-4060-9662-9af03a562016"
+      }
     }
   }
 }
