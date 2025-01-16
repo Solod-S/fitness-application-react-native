@@ -1,7 +1,7 @@
 {
   "expo": {
     "name": "Fit Body Flow",
-    "slug": "fit-body-flow",
+    "slug": "fitness-application",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
@@ -47,6 +47,7 @@
       "eas": {
         "projectId": "0085451d-8d37-4060-9662-9af03a562016"
       }
-    }
+    },
+    "owner": "solik098"
   }
 }
