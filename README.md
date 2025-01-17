@@ -7,13 +7,6 @@
 
 # Fit Body Flow
 
-<div align="center">
-
-https://github.com/user-attachments/assets/4a951e0e-c141-4e5c-9d11-791758092574
-
-  <br />
-</div>
-
 ![Fit Body Flow](/assets/Banner-min.jpg)
 
 **Project Description:**
@@ -27,6 +20,13 @@ Key Features:
 - User-Friendly Interface: The intuitive design makes it easy for users of all levels to navigate the app and find exercises quickly.
 
 Fit Body Flow is the perfect companion for fitness enthusiasts looking for a convenient way to discover, customize, and follow effective workout routines, whether at home or in the gym.
+
+<div align="center">
+
+https://github.com/user-attachments/assets/4a951e0e-c141-4e5c-9d11-791758092574
+
+  <br />
+</div>
 
 **Main Technologies:**
 
