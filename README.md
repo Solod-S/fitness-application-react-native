@@ -94,7 +94,7 @@ npm start
 - Using an Emulator:
 
   - iOS Simulator "i"
-  - iOS Simulator "a"
+  - Android Simulator "a"
 
 3. Enjoy Your App!!!
 
