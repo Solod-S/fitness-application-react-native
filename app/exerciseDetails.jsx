@@ -7,7 +7,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import Anticons from "react-native-vector-icons/AntDesign";
+import { AntDesign as Anticons } from "@expo/vector-icons";
 import Animated, { FadeInDown } from "react-native-reanimated";
 import { capitalizeFirstLetter } from "../shared/utils";
 

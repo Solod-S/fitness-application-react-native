@@ -9,7 +9,7 @@ import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
 } from "react-native-responsive-screen";
-import Ionicons from "react-native-vector-icons/Ionicons";
+import { Ionicons } from "@expo/vector-icons";
 import ExerciseList from "../components/ExerciseList";
 import { ScrollView } from "react-native-virtualized-view";
 import { capitalizeFirstLetter } from "../shared/utils";

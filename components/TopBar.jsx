@@ -1,4 +1,4 @@
-import Ionicons from "react-native-vector-icons/Ionicons";
+import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import { Text, View, Image } from "react-native";
 import { heightPercentageToDP as hp } from "react-native-responsive-screen";
