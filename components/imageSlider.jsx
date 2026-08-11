@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { View, Image, ActivityIndicator, LogBox } from "react-native";
-import Carousel from "react-native-reanimated-carousel";
+import { Carousel } from "react-native-reanimated-carousel";
 import {
   widthPercentageToDP as wp,
   heightPercentageToDP as hp,
@@ -36,7 +36,8 @@ export default function ImageSlider() {
         )}
         <Carousel
           width={wp(100)}
-          // height={200}
+          height={hp(20)}
+          style={{ width: wp(100), height: hp(20) }}
           data={sliderImages}
           autoPlay
           autoPlayInterval={2000}

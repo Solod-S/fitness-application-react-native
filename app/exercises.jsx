@@ -21,11 +21,15 @@ export default function Exercises() {
   // console.log("got item: ", item);
 
   useEffect(() => {
-    if (item) getExercises(item.name);
+    if (!item.name) {
+      router.replace("/");
+      return;
+    }
+    getExercises(item.name);
     return () => {
       setExercises([]);
     };
-  }, []);
+  }, [item.name]);
 
   const getExercises = async bodyPart => {
     // let data = await fetchExercisesByBodypart(bodyPart);
@@ -33,6 +37,9 @@ export default function Exercises() {
     // console.log("got data: ", data);
     setExercises(data);
   };
+
+  if (!item.name) return null;
+
   return (
     <ScrollView>
       <StatusBar style="light" />

@@ -1,6 +1,6 @@
 import { View, Text, TouchableOpacity, ScrollView, Image } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import React from "react";
+import React, { useEffect } from "react";
 import { useLocalSearchParams, useRouter } from "expo-router";
 // import { Image } from "expo-image";
 import {
@@ -14,6 +14,12 @@ import { capitalizeFirstLetter } from "../shared/utils";
 export default function exerciseDetails() {
   const item = useLocalSearchParams();
   const router = useRouter();
+
+  useEffect(() => {
+    if (!item.name) router.replace("/");
+  }, [item.name]);
+
+  if (!item.name) return null;
 
   return (
     <SafeAreaView className="flex-1 flex space-y-5 " edges={["top"]}>
@@ -31,7 +37,7 @@ export default function exerciseDetails() {
           onPress={() => router.back()}
           className="mx-2 absolute rounded-full mt-2 right-0"
         >
-          <Anticons name="closecircle" size={hp(4.5)} color="#f43f5e" />
+          <Anticons name="close-circle" size={hp(4.5)} color="#f43f5e" />
         </TouchableOpacity>
 
         {/* details */}
